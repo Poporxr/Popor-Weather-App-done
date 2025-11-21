@@ -2,7 +2,7 @@ import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
 const today = dayjs();
 const todaysDate = today.format('dddd, D MMM');
-const apiUrl = ' http://api.weatherapi.com/v1/forecast.json?';
+const apiUrl = ' https://api.weatherapi.com/v1/forecast.json?';
 const apiKey = '33bc064d1ccc4de6ae184238251611';
 const days = 7;
 const hourlyContainer = document.querySelector('.ctn-hourly');
