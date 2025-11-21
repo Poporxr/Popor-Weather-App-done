@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>POPOR FORECAST | LTD.</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-copatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/weather.css">
+  </head>
+  <body>
+    <nav>
+      <a><img class="logo" src="./images/logo.svg"></a>
+      <div>
+        <a class="units">
+          <img src="./images/icon-units.svg" alt=""> Units
+          <img src="./images/icon-dropdown.svg">
+        </a>
+        <div class="dropdown-unt" >
+          <a class="drop-imperial">Swich to imperial</a>
+          <li class="top-drop" data-gruop="temperature">Temperature
+            <a class="drop-ut ticked celsius">Celsius(&#176;C)</a>
+          <a class="drop-ut farenheit">Farenheit(&#176;F)</a>
+          </li>
+          
+          <hr>
+          <li class="top-drop" data-group="wind-speed">Wind speed
+            <a class="drop-ut ticked kmh">Km/h</a>
+          <a class="drop-ut mph">mph</a>
+          </li>
+          <hr>
+          <li class="top-drop" data-group="precipitation">Precipitation
+            <a class="drop-ut ticked mm">Millimeters(mm)</a>
+          <a class="drop-ut inches">Inches(in)</a>
+          </li>
+          
+        </div>
+      </div>
+     
+    </nav>
+    
+    <div class="first-section transition hidden">
+      <h2>How's the sky looking today?</h2>
+      <div class="search-section">
+        <input class="input-search" placeholder="Seach for a place..." type="text">
+        <button class="search-btn">Search</button>
+    </div>
+    </div>
+
+      <div class="weather-section js-weather-section">
+        <div class="left js-left">
+      
+          <div class="country-time transition hidden">
+            <div class="count-date">
+              <h3 class="transition hidden js-country"></h3>
+              <p class="transition hidden js-date"></p>
+            </div>
+            <div class="degrees transition hidden">
+              <img class="js-weather loading" src="./images/icon-loading.svg">
+              <a class="js-temperature"></a>
+            </div>
+          </div>
+          <div class="atmosphere">
+            <a class="factors transition hidden ">
+              <p>Feels Like</p>
+              <h2 class="js-feel-like">--</h2>
+              </a>
+            <a class="factors transition hidden ">
+              <p>Humidity</p>
+              <h2 class="js-humidity">--</h2>
+              </a>
+            <a class="factors transition hidden ">
+              <p>Wind</p>
+              <h2 class="js-wind">--</h2>
+              </a>
+            <a class="factors transition hidden ">
+              <p>Precipitation</p>
+              <h2 class="js-precp">--</h2>
+            </a>
+          </div>
+          <p class="transition hidden">Daily forecast</p>
+          <div class="weekday">
+            <div class="days transition hidden">
+              <a class="day-one">--</a>
+              <img class="one-image" src="">
+              <span class="spanner">
+                <a class="one-maxtemp"></a>
+                <a class="one-mintemp"></a>
+              </span>
+            </div>
+            <div class="days transition hidden">
+               <a class="two">--</a>
+              <img class="second-img" src="">
+              <span class="spanner">
+                <a class="two-maxtemp"></a>
+                <a class="two-mintemp"></a>
+              </span>
+            </div>
+            <div class="days transition hidden">
+               <a class="three">--</a>
+              <img class="third-image" src="">
+              <span class="spanner">
+                <a class="three-maxtemp"></a>
+                <a class="three-mintemp"></a>
+              </span>
+            </div>
+            <div class="days transition hidden">
+               <a class="four">--</a>
+              <img class="fourth-image" src="">
+              <span class="spanner">
+                <a class="fourth-maxtemp"></a>
+                <a class="four-mintemp"></a>
+              </span>
+            </div>
+            <div class="days transition hidden">
+               <a class="five">--</a>
+              <img class="fifth-image" src="">
+              <span class="spanner">
+                <a class="fifth-maxtemp"></a>
+                <a class="fifth-mintemp"></a>
+              </span>
+            </div>
+            <div class="days transition hidden">
+               <a class="sixth">--</a>
+              <img class="six-image" src="">
+              <span class="spanner">
+                <a class="sixth-maxtemp"></a>
+                <a class="sixth-mintemp"></a>
+              </span>
+            </div>
+            <div class="days transition hidden">
+               <a class="seventh">--</a>
+              <img class="seven-image" src="">
+              <span class="spanner">
+                <a class="seventh-maxtemp"></a>
+                <a class="seventh-mintemp"></a>
+              </span>
+            </div>
+          </div> 
+        </div>
+        <div class="right transition hidden">
+          <div class="right-nav transition hidden">
+            <p>Hourly Forecast</p>
+            <div class="relate">
+            <a class="right-forecast">
+              <span class="fore-day">-</span>
+              <img src="./images/icon-dropdown.svg">
+            </a>
+            <div class="day-drop day-selector transition hidden">
+              <button class="diff-days monday transition hidden" value="0">
+                Monday</button>
+              <button class="diff-days tuesday transition hidden" value="1">
+                Tuesday</button>
+              <button class="diff-days wednesday transition hidden " value="2">
+                Wednesday</button>
+              <button class="diff-days thursday transition hidden" value="3">
+                Thursday</button>
+              <button class="diff-days friday transition hidden" value="4">
+                Friday</button>
+              <button class="diff-days saturday transition hidden" value="5">
+                Saturday</button>
+              <button class="diff-days sunday transition hidden" value="6">
+                Sunday</button>
+            </div>
+            </div>
+           
+          </div>
+          <div class="ctn-hourly"></div>
+        <!--
+          
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-storm.webp">3pm
+            </a>
+            <a>68 &#176;</a>
+          </div>
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-snow.webp">4pm
+            </a>
+            <a>68 &#176;</a>
+          </div>
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-sunny.webp">5pm
+            </a>
+            <a>68 &#176;</a>
+          </div>
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-rain.webp">6pm
+            </a>
+            <a>63 &#176;</a>
+          </div>
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-drizzle.webp">7pm
+            </a>
+            <a>68 &#176;</a>
+          </div>
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-overcast.webp">8pm
+            </a>
+            <a>64 &#176;</a>
+          </div>
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-partly-cloudy.webp">9pm
+            </a>
+            <a>68 &#176;</a>
+          </div>
+          <div class="hourly-forecast transition hidden">
+            <a class="hours">
+              <img src="../assets/images/icon-fog.webp">10pm
+            </a>
+            <a>63 &#176;</a>
+          </div> -->
+          
+        </div>
+      </div>
+      <script type="module" src="Live.js"></script>
+      <script type="module" src="weather.js"></script>
+      
+  </body>
+</html>
