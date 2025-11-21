@@ -65,7 +65,7 @@ li {
   background-color: hsl(243, 23%, 24%);
 }
 .drop-ut.ticked::after {
-  content: url(./images/icon-checkmark.svg);
+  content: url(../images/icon-checkmark.svg);
   margin-left: 25px;
 }
 
